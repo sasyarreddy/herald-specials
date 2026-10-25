@@ -1,0 +1,11 @@
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: #c5050c;
+  color: white;
+  font-family: Georgia, serif;
+}
