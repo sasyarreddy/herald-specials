@@ -295,7 +295,38 @@ export const STORIES = {
     },
   ],
   feature: placeholders("feature", "Feature"),
-  arts: placeholders("arts", "Arts"),
+  arts: [
+    {
+      id: "lasting-impact-political-art",
+      title: "The lasting impact of political art: from World War I to modern Wisconsin Historical Society",
+      dek: "Wartime posters, political memes and other forms of art shape public opinion throughout history",
+      author: "Declan McDonnell",
+      role: "ArtsEtc Editor",
+      date: "October 28, 2026",
+      image: "/stories/arts-political-art.jpeg",
+      imageAlt:
+        "Collage of dozens of 1968 Nixon and Humphrey campaign buttons arranged around the classic Uncle Sam “I Want You for U.S. Army” recruitment poster.",
+      caption: "Mixed media of ‘I want you’ piece from the Library of Congress and collection of political paraphernalia from the Wisconsin Historical Society.",
+      body: [
+        `On a college campus, especially at this time of the year, political messages can be difficult to escape. They show up in online video advertisements, social media posts and flyers taped to bulletin boards and light poles. The vessel of these messages might look different from years past, but the idea remains the same — to make people feel strongly about politics, whether or not they are taking the time to realize they are feeling that way.`,
+        `Decades before our current era of social media infographics and political memes, artists used images to mock candidates, garner voter support and sway public opinion on political issues. Political art serves as a crystallized record of past social movements and societal attitudes at the time of its creation, and the history of political art as a medium.`,
+        `Political art became a powerful tool and staple of newspaper production as printing expanded during the 18th century. It would make a name and identity for itself by exaggerating politicians' appearances, campaign promises and overall public identity to extremes. Cartoonists of the time began to uncover the potential of political cartoons as a medium and their ability to communicate dense arguments in a single image.`,
+        `One extremely popular device to distribute these messages and rhetoric would be the political poster. Campaign posters too rose with the 18th century expansion of printing and reflected the same charged emotions emanating from political cartoons. At the most basic level, a campaign poster serves to promote a curated, idealized version of a political candidate, according to <a href="https://www.politico.com/story/2012/05/the-power-of-the-poster-075888">Politico</a>.`,
+        `Political posters as a medium reached the height of their impact during World War I, according to the <a href="https://www.loc.gov/collections/world-war-i-posters/about-this-collection/">Library of Congress</a>. The poster was a major tool to provide information about the ongoing conflict to countries on both sides of the war, and was used to garner support, urge action and boost morale, according to the Library of Congress. Even considering the late entrance of the U.S. into World War I, the country produced more posters than any other country, according to the Library of Congress.`,
+        `One of the most famous examples of political posters is <a href="https://www.theworldwar.org/learn/about-wwi/uncle-sam-we-want-you">James Montgomery Flagg’s 1917 illustration</a> of Uncle Sam pointing toward the viewer paired with the words, “I Want YOU for U.S. Army.” This striking and confident gesture served as a powerful tool for military recruitment, as over four million copies of this specific image were printed between 1917 and 1918.`,
+        `Moving forward in the U.S., newspapers would be impactful for cementing public opinions on politicians. Cartoonists poured frustrations on political issues into portrayals of political figures as clowns and tyrants. Wisconsin has its own history of political art, as the <a href="https://wisconsinhistory.org/">Wisconsin Historical Society’s</a> collections include political cartoons and posters from throughout the state’s history. Included in the collection are pieces from Wisconsin politicians like progressive Robert M. La Follette Sr., including depictions of him both in support of and in criticism of his reforms.`,
+        `From a more recent candidate, the Wisconsin Historical Society’s collection also includes both campaign posters and opposing political art related to former Wisconsin governor Scott Walker, according to the <a href="https://isthmus.com/news/snapshot/memory-cards-scott-walker-act-10-protest-archives/">Isthmus</a>.`,
+        `Walker’s entrance into the presidential race followed his three-time election in Wisconsin, and a national backing from conservative donors pushed Walker’s Wisconsin to strip union bargaining rights from public workers, according to <a href="https://www.pbs.org/newshour/politics/watch-live-scott-walker-drop-2016-presidential-race">PBS</a>. Artists would create opposing <a href="https://theweek.com/cartoons/566373/political-cartoon-scott-walker">political posters</a> in response, pouring frustrations into exaggerated portrayals.`,
+        `The Wisconsin Historical Society continues to collect political artistic materials, such as posters, buttons, photographs and other artistic objects connected to elections and larger political movements. These objects reveal a history that an official record may not.`,
+        `A candidate’s policy and public platform can tell what a politician promised to do, but political art and imagery surrounding the campaign serve as a look into how the candidate wanted their voters to feel. Particular image choices can offer glimpses into the political landscape of the particular election.`,
+        `In this sense, political art isn’t an addition tacked onto official historical documents, but rather a lens into the attitudes and reactions of the greater public.`,
+        `And political art hasn’t disappeared in the modern day. In the same way political artists adapted to the expansion of the printing press in the 18th century, political art has migrated to the online world.`,
+        `Today, campaign graphics, satirical illustrations and political memes serve similar functions as traditional newspaper cartoons and political posters. Much like their printed ancestors, these images condense complicated arguments into singular images, but unlike the entrance cost of early publishing, anyone with basic design skills and a strong opinion on current issues can express their frustrations or support through political art.`,
+        `The popularity of social media changes the game on political art participation. Political art is not limited to accomplished, recognized professionals or major publication artists. In a critical time for Wisconsin, with midterm elections on the horizon, students can create their own graphics about campaign frustrations and support.`,
+        `Political art has long been more than a speck on the record of official historical documentation. It shapes how the general public understands and feels about their leaders and their own relations to them. As political art evolves with newspapers, wartime propaganda and social media memes, its forms may change, but its guiding principles and purposes remain the same.`,
+      ],
+    },
+  ],
   sports: [
     {
       id: "mens-basketball-rebuilt-rotation",
@@ -304,7 +335,7 @@ export const STORIES = {
       author: "Simon Panzer",
       role: "Sports Associate Editor",
       date: "October 29, 2026",
-      image: "/stories/sports-mens-basketball.jpeg",
+      image: "/stories/sports-mens-basketball.jpg",
       imageAlt:
         "Low-angle view from the court of a Wisconsin player in a white No. 25 jersey holding the ball overhead while a Michigan State defender guards him, with a packed red-clad crowd and retired-number banners in the background.",
       caption: "Wisconsin Men's Basketball beats Number 10. Michigan State at the Kohl Center. February 13, 2026.",
