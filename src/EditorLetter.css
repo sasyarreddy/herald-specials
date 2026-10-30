@@ -1,0 +1,135 @@
+/* Cream frame, matching the line around the Fun & Games / Voter Guide boxes.
+   Sizes use cqw (1cqw = 1% of the section's width), so the box keeps the
+   same proportions on every screen, like the grid below it. */
+.el {
+  container-type: inline-size;
+  background: #fbf3e6;
+  padding: 6px 6px 0;
+}
+
+.el-box {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  /* height follows the text, so the box ends just after the letter */
+  background: #fbf3e6;
+  color: #10153a;
+  overflow: hidden;
+}
+
+/* ---------- Text ---------- */
+
+.el-text {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 2.2cqw 2.6cqw 1.6cqw; /* last value = space below the text */
+}
+
+.el-kicker {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.8cqw;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c5050c;
+}
+
+.el-title {
+  margin: 0.3cqw 0 0.5cqw;
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 2.6cqw;
+  line-height: 1.02;
+}
+
+.el-byline {
+  margin: 0 0 1cqw;
+  padding-bottom: 0.7cqw;
+  border-bottom: 1px solid rgb(16 21 58 / 0.25);
+  font-family: "Inter", sans-serif;
+  font-size: 0.85cqw;
+}
+
+.el-author { font-weight: 600; color: #23218f; }
+
+/* The letter flows into two columns to fit the shorter box */
+.el-body {
+  flex: 1;
+  min-height: 0;
+  column-count: 2;
+  column-gap: 2.4cqw;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 0.92cqw;
+  line-height: 1.45;
+}
+
+.el-body p { margin: 0 0 0.6cqw; }
+
+.el-body a {
+  color: #23218f;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.el-signoff { margin-top: 1cqw !important; margin-bottom: 0.1cqw !important; }
+
+.el-signature {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 1.3cqw;
+}
+
+.el-ps { opacity: 0.85; margin-bottom: 0 !important; }
+
+/* ---------- Photo, cropped and faded into the cream ---------- */
+
+.el-photo {
+  position: relative;
+  min-height: 0;
+}
+
+.el-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%; /* keeps the sign in view; adjust the % to move the crop */
+  mix-blend-mode: multiply;    /* tints the stone wall into the cream */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 45%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 45%);
+}
+
+/* ---------- Phones: text would be too tiny at half-grid height,
+   so the box grows to fit, one column, photo on top ---------- */
+
+@media (max-width: 700px) {
+  .el-box { grid-template-columns: 1fr; }
+
+  .el-text { padding: 1.5rem 1.25rem; }
+  .el-kicker { font-size: 0.8rem; }
+  .el-title { font-size: 2rem; margin: 0.3rem 0 0.6rem; }
+  .el-byline { font-size: 0.9rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; }
+
+  .el-body {
+    column-count: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .el-body p { margin-bottom: 0.9rem; }
+  .el-signoff { margin-top: 1.25rem !important; }
+  .el-signature { font-size: 1.3rem; }
+
+  .el-photo {
+    order: -1;
+    min-height: 200px;
+  }
+
+  .el-photo img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  }
+}
