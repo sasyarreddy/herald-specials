@@ -5,7 +5,7 @@
   inset: 0;
   z-index: 1000;
   display: flex;
-  padding: 5vw;
+  padding: 2.5vw;
   background: rgb(0 0 0 / 0.55);
   animation: sm-fade-in 0.2s ease-out;
 }

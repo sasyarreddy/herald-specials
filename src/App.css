@@ -66,3 +66,17 @@
 .bh-btn--cream { background: #fbf3e6; color: #23218f; }
 .bh-btn--blue  { background: #5b5fc7; color: #fff; }
 .bh-btn--coral { background: #e8707a; color: #23218f; }
+
+.bh-btn {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.bh-btn:focus-visible {
+  outline-color: #fbf3e6;
+}
+
+.bh-btn {
+  border: 0;
+  cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import StoryModal from "./StoryModal";
 import { STORIES } from "./stories";
-import cow from "./assets/vote-cow.jpg"; // change to your cow photo's actual file name
+import cow from "./assets/vote-cow.jpg"; 
 
 const COLS = 10;
 const ROWS = 8;
