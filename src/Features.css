@@ -1,0 +1,216 @@
+/* ---------- The two boxes under the cover ---------- */
+
+.fb {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 6px;
+  background: #fbf3e6; /* cream shows through as the dividing line, like the grid */
+}
+
+.fb-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: clamp(140px, 22vw, 320px);
+  padding: 1rem;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  transition: filter 0.2s;
+}
+
+.fb-box:hover { filter: brightness(1.08); }
+.fb-box:focus-visible { outline: 3px solid #fbf3e6; outline-offset: -8px; }
+
+.fb-box--coral { background: #e8707a; color: #23218f; }
+.fb-box--blue  { background: #5b5fc7; color: #fff; }
+
+.fb-title {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 4.5vw, 3.75rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.fb-blurb {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 1.4vw, 1.1rem);
+}
+
+/* ---------- Shared pop-up content area ---------- */
+
+.fx-body {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.fx-body a {
+  color: #23218f;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* ---------- Quiz ---------- */
+
+.qz-progress {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+}
+
+.qz-question {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+}
+
+.qz-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.qz-option {
+  padding: 1rem 1.25rem;
+  border: 2px solid #10153a;
+  background: #fff;
+  color: #10153a;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.qz-option:hover:not([aria-disabled="true"]) {
+  background: #fbf3e6;
+  transform: translateX(4px);
+}
+
+.qz-option[aria-disabled="true"] { cursor: default; }
+.qz-option.is-correct { background: #5b5fc7; border-color: #5b5fc7; color: #fff; }
+.qz-option.is-wrong   { background: #e8707a; border-color: #e8707a; }
+
+.qz-feedback { min-height: 6rem; margin-top: 1.5rem; }
+.qz-feedback p { margin: 0 0 1rem; }
+
+.qz-next {
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  background: #10153a;
+  color: #fff;
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.qz-next:hover { background: #23218f; }
+
+/* ---------- Voter guide ---------- */
+
+.vg-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.vg-kicker {
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+
+.vg-title {
+  margin: 0.25rem 0 0.75rem;
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.vg-lede { margin: 0; font-size: 1.15rem; }
+
+.vg-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 6px;
+}
+
+.vg-step {
+  position: relative;
+  padding: 1.5rem 1.25rem 1.25rem;
+}
+
+.vg-step h3 {
+  margin: 0.5rem 0;
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.vg-step p { margin: 0; font-size: 0.95rem; }
+
+.vg-step--coral { background: #e8707a; color: #23218f; }
+.vg-step--blue  { background: #5b5fc7; color: #fff; }
+.vg-step--blue a { color: #fff; }
+.vg-step--cream { background: #fbf3e6; color: #10153a; }
+
+.vg-num {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+.vg-section { margin-bottom: 2rem; }
+
+.vg-section h3 {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #10153a;
+}
+
+.vg-list { padding-left: 1.2rem; margin: 0; }
+.vg-list li { margin-bottom: 0.4rem; }
+
+.vg-note { font-size: 0.85rem; opacity: 0.7; }
+
+.vg-callout {
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border-left: 6px solid #5b5fc7;
+}
+
+.vg-callout h3 { border-bottom: 0; padding-bottom: 0; }
+.vg-callout p { margin: 0; }
+
+/* Placeholders stand out so they don't get published by accident */
+.vg-todo {
+  background: #fff3a8;
+  color: #10153a;
+  padding: 0.25rem 0.4rem;
+  font-style: italic;
+}
