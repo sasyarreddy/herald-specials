@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Popup from "./Popup";
-import Quiz from "./Quiz";
+import Quiz, { QUIZ } from "./Quiz";
 import VoterGuide from "./VoterGuide";
 import "./Features.css";
 
@@ -8,7 +8,8 @@ const BOXES = [
   {
     id: "games",
     title: "Fun & Games",
-    blurb: "Test your election knowledge",
+    blurb: QUIZ.title,
+    image: QUIZ.image, // shown behind the text at 30% opacity
     color: "coral",
     content: <Quiz />,
   },
@@ -34,6 +35,7 @@ export default function FeatureBoxes() {
           className={`fb-box fb-box--${b.color}`}
           onClick={() => setOpenId(b.id)}
         >
+          {b.image && <img className="fb-bg" src={b.image} alt="" />}
           <span className="fb-title">{b.title}</span>
           <span className="fb-blurb">{b.blurb}</span>
         </button>
