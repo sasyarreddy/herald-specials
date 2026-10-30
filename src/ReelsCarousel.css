@@ -58,9 +58,21 @@
 .rc-track::-webkit-scrollbar { display: none; } /* hide it in Chrome/Safari */
 
 .rc-reel {
+  /* Trims Instagram's white header and footer off each reel.
+     Raise a number to cut more, lower it to show more. */
+  --crop-top: 56px;     /* profile name bar above the video */
+  --crop-bottom: 160px; /* likes / "View more on Instagram" below it */
+
   flex: 0 0 340px;
   scroll-snap-align: center;
-  zoom: 0.8; /* shrinks each reel (and its height); 1 = full size */
+  zoom: 1; /* shrinks each reel (and its height); 1 = full size */
+  overflow: hidden;
+}
+
+/* Instagram's player (it replaces our placeholder once loaded) */
+.rc-reel iframe.instagram-media {
+  margin-top: calc(-1 * var(--crop-top)) !important;
+  margin-bottom: calc(-1 * var(--crop-bottom)) !important;
 }
 
 /* centers the row when every reel fits on screen */
@@ -68,8 +80,9 @@
 .rc-reel:last-child  { margin-right: auto; }
 
 .rc-reel .instagram-media {
-  background: #fff !important;
+  background: transparent !important;
   border: 0 !important;
+  box-shadow: none !important;
   border-radius: 0 !important; /* square corners, like the grid */
   margin: 0 !important;
   min-width: 326px !important;

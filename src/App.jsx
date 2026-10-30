@@ -2,7 +2,7 @@ import "./App.css";
 import SectionGrid from "./SectionGrid";
 import FeatureBoxes from "./FeatureBoxes";
    import EditorLetter from "./EditorLetter";
-
+import Footer from "./Footer";
    import ReelsCarousel from "./ReelsCarousel";
 import cover from "./assets/cover.jpg";
 
@@ -26,6 +26,8 @@ function App() {
       <main style={{ padding: "2rem" }}>
         {/* stories go here */}
       </main>
+
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,70 @@
+/* Cream frame, matching the sections above */
+
+
+.ft-inner {
+  color: #10153a;
+  font-family: "Inter", sans-serif;
+}
+
+/* Logo left, address right */
+.ft-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ft-logo img {
+  display: block;
+  height: clamp(36px, 4vw, 52px);
+  width: auto;
+}
+
+.ft-address {
+  font-style: normal;
+  text-align: right;
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  line-height: 1.4;
+  color: #23218f;
+}
+
+/* Social links */
+.ft-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.75rem;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgb(16 21 58 / 0.2);
+}
+
+.ft-social a {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #10153a;
+  text-decoration: none;
+}
+
+.ft-social a:hover { color: #5b5fc7; text-decoration: underline; text-underline-offset: 4px; }
+
+.ft-more {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.ft-more a { color: #23218f; }
+
+.ft a:focus-visible { outline: 2px solid #5b5fc7; outline-offset: 3px; }
+
+/* Phones: stack and center */
+@media (max-width: 600px) {
+  .ft-top { flex-direction: column; text-align: center; }
+  .ft-address { text-align: center; }
+}
