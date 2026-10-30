@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Popup from "./Popup";
 import Quiz, { QUIZ } from "./Quiz";
-import VoterGuide from "./VoterGuide";
+import VoterGuide, { GUIDE } from "./VoterGuide";
 import "./Features.css";
 
 const BOXES = [
@@ -16,7 +16,8 @@ const BOXES = [
   {
     id: "guide",
     title: "Voter Guide",
-    blurb: "What you need before Nov. 3",
+    blurb: GUIDE.title,
+    image: GUIDE.image, // shown behind the text at 30% opacity
     color: "blue",
     content: <VoterGuide />,
   },
