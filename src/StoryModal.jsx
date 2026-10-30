@@ -49,10 +49,9 @@ export default function StoryModal({ category, stories, onClose }) {
                 key={s.id}
                 className="sm-thumb"
                 onClick={() => setCurrent(i)}
-                aria-label={s.title}
-                title={s.title}
               >
                 <img src={s.image} alt="" />
+                <span className="sm-thumb-title">{s.title}</span>
               </button>
             ))}
           </nav>
@@ -70,22 +69,35 @@ export default function StoryModal({ category, stories, onClose }) {
         {story ? (
           // key makes the article remount on switch: resets scroll + replays fade
           <article key={story.id} className="sm-article">
-            <img
-              className="sm-hero"
-              src={story.image}
-              alt={story.imageAlt ?? ""}
-            />
+            <figure className="sm-figure">
+              <img
+                className="sm-hero"
+                src={story.image}
+                alt={story.imageAlt ?? ""}
+              />
+              {story.caption && (
+                <figcaption className="sm-caption">{story.caption}</figcaption>
+              )}
+            </figure>
             <div className="sm-text">
               <h2 id="sm-title" className="sm-title">
                 {story.title}
               </h2>
+              {story.dek && <p className="sm-dek">{story.dek}</p>}
               <p className="sm-byline">
                 by <span className="sm-author">{story.author}</span>
                 {story.role && `, ${story.role}`} • {story.date}
               </p>
-              {story.body.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+              {/* Paragraphs are your own trusted text and may contain <a> links */}
+              <div
+                className="sm-body"
+                dangerouslySetInnerHTML={{
+                  // subheadings (<h3>) stand alone; everything else is a paragraph
+                  __html: story.body
+                    .map((p) => (p.startsWith("<h3") ? p : `<p>${p}</p>`))
+                    .join(""),
+                }}
+              />
             </div>
           </article>
         ) : (

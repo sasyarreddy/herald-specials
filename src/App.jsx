@@ -1,6 +1,6 @@
 import "./App.css";
 import SectionGrid from "./SectionGrid";
-import cover from "./assets/student outlooks coveRr (1).png";
+import cover from "./assets/cover.jpg";
 
 
 function App() {
