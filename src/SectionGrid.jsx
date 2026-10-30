@@ -9,7 +9,7 @@ const ROWS = 8;
 // id must match a key in stories.js
 // col/row are 1-indexed; span = how many cells wide; tall = how many cells high
 const LINKS = [
-  { id: "news",     label: "News",    col: 1, row: 1, span: 2, color: "cream" },
+  { id: "news",     label: "News",    col: 1, row: 1, span: 2, color: "blue" },
   { id: "science",  label: "Science", col: 5, row: 2, span: 2, color: "blue"  },
   { id: "feature",  label: "Feature: Student Outlooks on the Elections", col: 1, row: 4, span: 2, tall: 2, color: "coral" },
   { id: "arts",     label: "Arts",    col: 9, row: 5, span: 2, color: "cream" },

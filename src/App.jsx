@@ -2,6 +2,8 @@ import "./App.css";
 import SectionGrid from "./SectionGrid";
 import FeatureBoxes from "./FeatureBoxes";
    import EditorLetter from "./EditorLetter";
+
+   import ReelsCarousel from "./ReelsCarousel";
 import cover from "./assets/cover.jpg";
 
 
@@ -15,7 +17,7 @@ function App() {
       </header>
 
 <EditorLetter />
-
+<ReelsCarousel />
 
 <FeatureBoxes />
 

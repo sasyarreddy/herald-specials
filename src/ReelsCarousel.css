@@ -1,0 +1,129 @@
+/* Cream frame, matching the letter and the Fun & Games / Voter Guide boxes */
+.rc {
+  background: #fbf3e6;
+  padding: 6px 6px 0;
+}
+
+.rc-inner {
+  background: #cce9ff; /* same light blue as the pop-ups */
+  padding: clamp(1rem, 2.5vw, 1.75rem) 0;
+  color: #10153a;
+}
+
+.rc-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.rc-title {
+  margin: 0;
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: #10153a;
+}
+
+.rc-follow {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #23218f;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.rc-follow:hover { color: #5b5fc7; }
+
+/* ---------- The sideways-scrolling row ---------- */
+
+.rc-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 0 clamp(1rem, 4vw, 3rem) 1rem;
+  scroll-padding: 0 clamp(1rem, 4vw, 3rem);
+  scrollbar-width: none; /* hide the scrollbar (Firefox) */
+}
+
+.rc-track::-webkit-scrollbar { display: none; } /* hide it in Chrome/Safari */
+
+.rc-reel {
+  flex: 0 0 340px;
+  scroll-snap-align: center;
+  zoom: 0.8; /* shrinks each reel (and its height); 1 = full size */
+}
+
+/* centers the row when every reel fits on screen */
+.rc-reel:first-child { margin-left: auto; }
+.rc-reel:last-child  { margin-right: auto; }
+
+.rc-reel .instagram-media {
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: 0 !important; /* square corners, like the grid */
+  margin: 0 !important;
+  min-width: 326px !important;
+  width: 100% !important;
+  max-width: 340px !important;
+}
+
+/* shown until Instagram's player loads, or if it's blocked */
+.rc-fallback {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 9 / 16;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #23218f;
+}
+
+/* ---------- Arrows ---------- */
+
+.rc-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.rc-btns button {
+  padding: 0.25rem;
+  border: 0;
+  background: none;
+  color: #5b5fc7;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.rc-btns svg {
+  display: block;
+  width: 2.75rem;
+  height: auto;
+  fill: currentColor;
+}
+
+.rc-btns button:hover { color: #23218f; }
+.rc-btns button:last-child:hover  { transform: translateX(4px); }
+.rc-btns button:first-child:hover { transform: translateX(-4px); }
+
+.rc-btns button:focus-visible,
+.rc-track:focus-visible {
+  outline: 3px solid #10153a;
+  outline-offset: 2px;
+}
+
+@media (max-width: 500px) {
+  .rc-reel { flex-basis: 86vw; }
+}
