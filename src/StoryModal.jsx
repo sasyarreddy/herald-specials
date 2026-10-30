@@ -92,9 +92,14 @@ export default function StoryModal({ category, stories, onClose }) {
               <div
                 className="sm-body"
                 dangerouslySetInnerHTML={{
-                  // subheadings (<h3>) stand alone; everything else is a paragraph
+                  // subheadings (<h3>) and inline photos (<figure>) stand alone;
+                  // everything else is a paragraph
                   __html: story.body
-                    .map((p) => (p.startsWith("<h3") ? p : `<p>${p}</p>`))
+                    .map((p) =>
+                      p.startsWith("<h3") || p.startsWith("<figure")
+                        ? p
+                        : `<p>${p}</p>`
+                    )
                     .join(""),
                 }}
               />

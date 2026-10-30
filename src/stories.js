@@ -6,6 +6,8 @@
 //   `Read more at <a href="https://example.com">Example</a>.`
 // Use backticks (`) around each paragraph so quotes and apostrophes are safe.
 // For a section subheading, use its own entry: `<h3>Subheading text</h3>`
+// For a photo inside the article, use its own entry:
+//   `<figure><img src="..." alt="..."><figcaption>Caption</figcaption></figure>`
 
 const PLACEHOLDER_IMG = "https://placehold.co/1200x800/5b5fc7/fbf3e6?text=Photo";
 const PLACEHOLDER_BODY = [
@@ -294,6 +296,77 @@ export const STORIES = {
   ],
   feature: placeholders("feature", "Feature"),
   arts: placeholders("arts", "Arts"),
-  sports: placeholders("sports", "Sports"),
+  sports: [
+    {
+      id: "mens-basketball-rebuilt-rotation",
+      title: "Men’s basketball: Meet Badgers’ rebuilt rotation",
+      dek: "Three exhibition games have given glimpse into what Greg Gard hopes can contend in Big Ten",
+      author: "Simon Panzer",
+      role: "Sports Associate Editor",
+      date: "October 29, 2026",
+      image: "/stories/sports-mens-basketball.jpeg",
+      imageAlt:
+        "Low-angle view from the court of a Wisconsin player in a white No. 25 jersey holding the ball overhead while a Michigan State defender guards him, with a packed red-clad crowd and retired-number banners in the background.",
+      caption: "Wisconsin Men's Basketball beats Number 10. Michigan State at the Kohl Center. February 13, 2026.",
+      body: [
+        `<a href="https://uwbadgers.com/sports/mens-basketball/roster/coaches/greg-gard/2898">Greg Gard</a> had a tall task this offseason. Wisconsin lost their star back court of <a href="https://goduke.com/sports/mens-basketball/roster/john-blackwell/24892">John Blackwell</a> and <a href="https://uwbadgers.com/sports/mens-basketball/roster/nick-boyd/14419">Nick Boyd</a> and had departures from other starters <a href="https://gamecocksonline.com/sports/mbball/roster/player/aleksas-bieliauskas/">Aleksas Bieliauskas</a> and <a href="https://uwbadgers.com/sports/mens-basketball/roster/andrew-rohde/14422">Andrew Rohde</a>. This means that four of the five starters from last year have either graduated or transferred.`,
+        `Gard and his coaching staff had to do some soul searching, but found a product that can play together, it just might take some time to get up to speed.`,
+        `Through three exhibition games against <a href="https://parksiderangers.com/sports/mens-basketball">UW-Parkside</a>, <a href="https://greenbayphoenix.com/sports/mens-basketball">UW-Green Bay</a> and <a href="https://okstate.com/sports/mens-basketball">Oklahoma State</a>, Gard has trotted out the same five starters, with the only variation coming from how many minutes are being played.`,
+        `<h3>The Starting Five</h3>`,
+        `Starting at the true point guard position is newcomer <a href="https://uwbadgers.com/sports/mens-basketball/roster/owen-foxwell/15653">Owen Foxwell</a>. The 6-foot-2-inch Aussie is a fifth year, but in his first season of NCAA basketball, as his first five years of post-high school basketball were played in Melbourne for the <a href="https://www.semphoenix.com.au/">Phoenix</a> of the <a href="https://www.nbl.com.au/">Australian National Basketball League</a>, where he averaged 10.8 points, 4.5 assists and three rebounds.`,
+        `So far, Foxwell has put together three nice performances. In his first three games, Foxwell has given 10, 21 and 19-point performances, all of which accompanied by an average of five assists.`,
+        `Starting at the shooting guard position is returning senior <a href="https://uwbadgers.com/sports/mens-basketball/roster/jack-janicki/15625">Jack Janicki</a>, who is from White Bear Lake, Minn. Janicki has had a rough start in the opening three exhibitions. Totaling just five points across three games, Janicki has scored the least number of points, but also has shot the least out of any starter so far.`,
+        `So far through his collegiate career, Janicki has only started one game, which came against <a href="https://ohiostatebuckeyes.com/sports/mens-basketball">Ohio State</a> during the 2025-26 season where he only attempted two shots, making one, as well as three assists. Janicki also missed the last nine games of last season with a wrist injury, which he seems to be fully recovered from.`,
+        `Starting as a swing guard/forward No. 55 is the transfer from <a href="https://miamiredhawks.com/sports/mens-basketball">Miami (OH)</a>, senior <a href="https://uwbadgers.com/sports/mens-basketball/roster/eian-elmer/15654">Eian Elmer</a>. Leading his former team to the first undefeated season since the 2015 Kentucky Wildcats, Elmer is a sharpshooter. So far through three games, Elmer has shot for 14, 14 and 11 points respectively with a .481 shooting percentage.`,
+        `Elmer also played the most out of the starting five in two of the three games by a wide margin, and had four total steals across three games.`,
+        `The only returning player of the starting lineup is senior <a href="https://uwbadgers.com/sports/mens-basketball/roster/nolan-winter/15629">Nolan Winter</a>. Winter returns to a team that is all but familiar. He is returning to starting at the “power forward” position thanks to the addition of senior <a href="https://uwbadgers.com/sports/mens-basketball/roster/victory-onuetu/15633">Victory Onuetu</a>, a traditional center-like player.`,
+        `Winter put together three solid performances in October, averaging 12.3 points and 6.6 boards. Winter looks to be pretty similar to last year, so improvements are sought after on the defensive front.`,
+        `Finally, the aforementioned Onuetu. Transferring in from <a href="https://gohofstra.com/sports/mens-basketball">Hofstra</a>, Onuetu has filled in the center role that Wisconsin missed at many points last season. Winter and Bieliauskas would get bullied in the paint against the Big Ten’s best centers, but now with Onuetu, the paint will be patrolled with a little more care.`,
+        `Onuetu was an essential part of Hofstra’s run to the NCAA tournament last season averaging 6.9 rebounds and shooting 56.6% from the field. So far he is showing similar numbers, but his blocks were his strong suit last year, of which he got four of during the exhibition season.`,
+        `<h3>The Role Players</h3>`,
+        `The players coming off the bench are a very similar lineup from last season.`,
+        `First off the bench will most likely be junior <a href="https://uwbadgers.com/sports/mens-basketball/roster/austin-rapp/15628">Austin Rapp</a>. The 6-foot-10-inch man didn’t play in the first exhibition game against Parkside, but has been slowly ramping up, playing the most bench minutes in game three against Oklahoma State.`,
+        `Next is fifth-year <a href="https://uwbadgers.com/sports/mens-basketball/roster/braeden-carrington/16290">Braedon Carrington</a>. Carrington’s offseason has been very interesting to say the least. Carrington played a substantial role in all four years of his college career no matter where he was playing, making it challenging for him to play a fifth season, but thanks to the newly passed <a href="https://www.congress.gov/bill/119th-congress/senate-bill/4668">Protect College Sports Act</a>, athletes are now allowed five years of eligibility no matter what.`,
+        `This act originally didn’t include the high school graduating class of 2022 players, as they had seemingly graduated from their respective universities, but litigation on the matter is still active, according to <a href="https://www.flastergreenberg.com/printpilot-alert-352.pdf?1790699954">Flaster Greenberg Attorneys of Law</a>. This could allow for Carrington and many fellow classmates, such as former Badger Rohde and rival Golden Gopher <a href="https://gophersports.com/sports/mens-basketball/roster/cade-tyson/23333">Cade Tyson</a>, to continue playing on teams.`,
+        `As long as he is allowed to play, Carrington is a huge addition to the Badgers bench. Without Carrington, the three-point range is lackluster to say the least, but with him, it brings it back to the standard that Gard was hoping for.`,
+        `Carrington has re-instilled his 'live and die by the three’ mindset, with just one shot from within the arch attempted.`,
+        `Sophomore <a href="https://uwbadgers.com/sports/mens-basketball/roster/hayden-jones/15626">Hayden Jones</a> also received a good amount of playing time in the pre-season, increasing bench depth at the swing guard/forward position, averaging four points a game.`,
+        `The biggest change on the bench though, is the increased minutes of sophomore <a href="https://uwbadgers.com/sports/mens-basketball/roster/zach-kinziger/15627">Zach Kinziger</a>. De Pere’s best averaged 18 minutes a night, a monumental increase from his occasional blowout appearance last season. In his 18 minutes across the board, Kinziger did exactly as expected, also shooting a plethora of threes, so expect to see those moving forward.`,
+        `<h3>So, What Does The Future Hold?</h3>`,
+        `It’s never too early for bracketology. <a href="https://www.espn.com/espn/feature/story/_/page/bracketology/ncaa-bracketology-2027-march-madness-men-field-predictions">Joe Lunardi</a>’s first rendition of the 2026-27 bracketology has the Badgers ranked a 10 seed, certainly a fair projection given how this team looks on paper compared to last season. It is going to take a minute for this team to get into motion, to look like their true selves, given that they have played just three games as a unit. So buckle up. It will probably look ugly early, but this team has the groundwork for something special come March.`,
+      ],
+    },
+    {
+      id: "football-badgers-storm-usc",
+      title: "Football: Badgers storm against USC",
+      dek: "Wisconsin ambushes Trojans, defense dominates in 24-7 victory",
+      author: "Simon Panzer",
+      role: "Sports Associate Editor",
+      date: "October 27, 2026",
+      image: "/stories/sports-football-usc.jpg",
+      imageAlt:
+        "Wisconsin football players in red jerseys and white helmets crowd around and celebrate with teammate No. 21 in front of a packed stadium crowd.",
+      caption: "24-7 Wisconsin Football Win vs. USC. October 24, 2026.",
+      body: [
+        `Wisconsin is brewing something special in Madtown.`,
+        `Coming off a disappointing outing against No. 7 <a href="https://uclabruins.com/sports/football/roster">University of California-Los Angeles</a>, the Badgers (5-2, 3-1 Big Ten) looked to bounce back against then No. 16 <a href="https://usctrojans.com/sports/football">University of Southern California</a>.`,
+        `And an uphill battle it was set to be. Coming into Saturday, USC held a top-three passing offense as quarterback <a href="https://usctrojans.com/sports/football/roster/jayden-maiava/18836">Jayden Maiava</a> was third in the nation in passing yards and fifth in touchdowns, so stopping him was set to be a focal point of the defensive game plan, and that came to fruition.`,
+        `Wisconsin’s defense is special. The Trojans’ first three drives were largely unsuccessful thanks to a big stop for no gain from fifth-year edge <a href="https://uwbadgers.com/sports/football/roster/sebastian-cheeks/15293">Sebastian Cheeks</a> on third and one to force a punt.`,
+        `Then, the next two drives for USC would end on interceptions from Maiava, the first by junior defensive back <a href="https://uwbadgers.com/sports/football/roster/bryce-west/15457">Bryce West</a>, which resulted in a red zone trip and a field goal. The second was thrown to sophomore safety <a href="https://uwbadgers.com/sports/football/roster/cairo-skanes/15399">Cairo Skanes</a>. Unfortunately, the Badgers' offense went stagnant after a long return from Skanes, and a missed field goal kept the game at 3-0.`,
+        `On the Trojans’ next drive, Cheeks sacked Maiava on second down to set up a third and 19, but thanks to a sideline interference from Wisconsin’s Director of Strength and Conditioning <a href="https://uwbadgers.com/sports/football/roster/staff/brady-collins/1216">Brady Collins</a>, an automatic first down aided to keep the drive alive for USC’s only points-scoring drive of the game.`,
+        `No matter for Wisconsin though, as 46 of senior running back <a href="https://uwbadgers.com/sports/football/roster/abu-sama-iii/15447">Abu Sama III</a>’s 71 yards came on this drive, setting up for junior running back <a href="https://uwbadgers.com/sports/football/roster/bryan-jackson-ii/15433">Bryan Jackson II</a>’s first touchdown as a Badger, putting the Badgers up 10-7 at halftime.`,
+        `Wisconsin executed the point sandwich to perfection. Coming out of the half, the Badgers' scramble was playing in full effect, driving down the field to set up a senior <a href="https://uwbadgers.com/sports/football/roster/colton-joseph/15434">Colton Joseph</a> screen pass to fifth-year <a href="https://uwbadgers.com/sports/football/roster/chris-brooks-jr-/15290">Chris Brooks Jr.</a> with an entourage on fourth and one from the 16-yard line, resulting in a touchdown to put the Badgers up 17-7.`,
+        `Two drives later, Jackson II missed his second Badgers touchdown by a hair, but fifth-year tight end <a href="https://uwbadgers.com/sports/football/roster/ryan-schwendeman/15449">Ryan Schwendeman</a> rushed for his first touchdown as a Badger instead, putting the Badgers to their winning score of 24-7.`,
+        `Wisconsin is now ranked 25th in the <a href="https://apnews.com/article/wisconsin-badgers-football-ranked-c4aa06b984b033dceca114cfed7a4566">AP poll</a>. This is their first time being ranked since week two of the 2023 season.`,
+        `This is one of the best-constructed teams in the <a href="https://uwbadgers.com/sports/football/roster/coaches/luke-fickell/2804">Luke Fickell</a> era.`,
+        `“Those guys on the defensive side of the ball played an incredible game,” Head Coach Luke Fickell said. “It’s tough to lose a football game when you hold a team to under [zero] yards rushing.”`,
+        `<a href="https://uwbadgers.com/sports/football/roster/coaches/mike-tressel/2828">Mike Tressel</a>’s defensive front played some of the best defensive football they could have dreamed for, holding a top-three passer in the nation to just 100 yards at halftime, and the entire rushing game to -17 yards.`,
+        `<figure><img src="https://badgerherald.com/wp-content/uploads/2026/10/DSC00142.jpg" alt="Fans rush onto the field after Wisconsin's 24-7 win over USC."><figcaption>Fans Storm the Field After 24-7 Win vs USC. October 24, 2026. (Emaline Savone)</figcaption></figure>`,
+        `Despite a great defensive performance, Wisconsin’s offense proved to be overall lackluster. Coming into the game, USC was the <a href="https://www.sports-reference.com/cfb/years/2026-team-defense.html">79th-ranked defense</a> in all of college football, giving up 350 yards a game. Wisconsin offered just 200 all day. Only 58 yards through the air for quarterback Joseph, despite it being very efficient, isn’t exactly the standard against a team that gives up 239 per game.`,
+        `If this is the offensive performance we see against one of the worst in the Big Ten, there is a lot of work to do against one of the nation’s best defensive fronts in Iowa City next week. <a href="https://hawkeyesports.com/sports/football">Iowa</a> (5-2, 2-2 Big Ten) has a top-nine defense in all of college football. Coming off a rival loss against <a href="https://gophersports.com/sports/football">Minnesota</a> (5-2, 3-1), the Hawkeyes are going to be hungry and relentless to save themselves from a rivalry sweep.`,
+        `On the flip side, Iowa ranks 54th in all of college football in offense, so the Tressel squad will look to create some old-fashioned Big Ten football come next Saturday.`,
+      ],
+    },
+  ],
   banter: placeholders("banter", "Banter"),
 };
