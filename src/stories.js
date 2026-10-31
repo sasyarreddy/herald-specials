@@ -483,7 +483,7 @@ export const STORIES = {
       author: "Declan McDonnell",
       role: "ArtsEtc Editor",
       date: "October 28, 2026",
-      image: "/stories/arts-political-art.jpg",
+      image: "/stories/arts-political-art.jpeg",
       imageAlt:
         "Collage of dozens of 1968 Nixon and Humphrey campaign buttons arranged around the classic Uncle Sam “I Want You for U.S. Army” recruitment poster.",
       caption: "Mixed media of ‘I want you’ piece from the Library of Congress and collection of political paraphernalia from the Wisconsin Historical Society.",
