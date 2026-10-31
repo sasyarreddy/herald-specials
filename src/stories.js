@@ -241,19 +241,7 @@ export const STORIES = {
         `Wisconsin does not need another promise that a developer will be transparent, or another assurance that the numbers will work out. It needs a standard — developers pay for the grid capacity they require, water use is disclosed and capped by watershed before a vote and community benefit agreements carry enforcement instead of applause. Neither candidate is proposing that. Both are offering the same thing Mount Pleasant already accepted twice — a decision pushed down to the people with the least information and the most to lose.`,
         `No matter which candidate gets elected, Wisconsinites must push for stronger and clearer policies on the data center issue before it creates irreversible harm to our communities. The bill arrives either way. The only question is who Wisconsin elects to ignore it.`,
       ],
-    },
-    {
-      id: "gender-clothes",
-      title: "Stop stitching gender into our clothes",
-      dek: "",
-      author: "Kaitlyn Broderick",
-      role: "Opinion Associate Editor",
-      date: "October 22, 2026",
-      image: PLACEHOLDER_IMG, // e.g. "/stories/gender-clothes.jpg"
-      imageAlt: "Plaid and pink shirts hanging on a clothing rack",
-      caption: "",
-      body: PLACEHOLDER_BODY,
-    },
+    }
   ],
 
   science: [
